@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Invoices::Application.config.secret_token = '5c9bdf35069334e25d92132e39b515f2ae001c9d05fe5ee80f2d7a668f0b85ecb42178ab7f18bd64c2857be660d31cb3ca29a3c8bd7c6c23f7f55afb77dd4cd9'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+Invoices::Application.config.secret_key_base = 'df223a69b0e79131f6d0cf4730e7c8818158ad912b32fb3458cd2bebde7b6b881b1a4de8335162f8bf8c9ac544287e91ff82a75b00ee2c312304bb57d962a2de'
