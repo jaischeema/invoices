@@ -2,53 +2,14 @@
 %html
   %head
     %title= AppConfig.site_title
-    %link{:href=>"//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css", :rel=>"stylesheet"}
+    = stylesheet_link_tag '//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tag
-
-    :javascript
-      $(function(){
-        $('#messages').slideDown();
-        setTimeout(function(){
-          $('#messages').slideUp();
-        }, 30000); // 30 seconds
-      });
-
   %body
-    %h1#head
-      = AppConfig.site_title
-      - if signed_in?
-        %span.right
-          = t('.currently_logged_in_as')
-          %strong= current_user.email
-          %span
-            (
-            = link_to t('.not_you'), logout_path, :method => :delete, :confirm => t('.confirm_not_you')
-            )
-
-    %ul#navigation
-      - if signed_in?
-        %li=        link_to t('.new_invoice'), new_invoice_path, :class => 'active'
-        %li=        link_to t('.invoices'), invoices_path
-        %li=        link_to t('.clients'), clients_path
-        %li.right=  link_to t('.logout'), logout_path, :method => :delete, :confirm => t('.confirm_logout')
-        - if current_user.company
-          %li.right=  link_to t('.edit_company'), edit_company_path(current_user.company)
-        -#%li.right   Settings
-      - else
-        %li= link_to t('.login'), show_login_path
-        %li= link_to t('.sign_up'), sign_up_path
-
-    - if flash[:alert] || flash[:notice]
-      #messages.container_16.clearfix{:style => "display: none;"}
-        - if flash[:alert]
-          %p.alert= flash[:alert]
-        - elsif flash[:notice]
-          %p.notice= flash[:notice]
-
-    #content.container_16.clearfix= yield
-
-    #foot
-      Open Source Invoicing Powered by
-      %strong Invoices
+    %nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+      .container
+        = link_to AppConfig.site_title, root_path, :class => "navbar-brand"
+        %ul.nav.navbar-nav.pull-right
+          <li><a href="#">Welcome, Mark Otto</a></li>
+          <li><a href="#">Logout</a></li>

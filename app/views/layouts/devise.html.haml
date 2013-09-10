@@ -1,0 +1,9 @@
+!!! 5
+%html
+  %head
+    %title= AppConfig.site_title
+    = stylesheet_link_tag '//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css'
+    = stylesheet_link_tag 'login'
+    = csrf_meta_tag
+  %body#devise
+    = yield
