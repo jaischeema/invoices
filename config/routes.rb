@@ -8,12 +8,10 @@ Invoices::Application.routes.draw do
   end
 
   resources :invoices
-
   resources :clients
-
   resources :companies
-
   resources :users
+
   controller :users do
     get "sign_up", :action => :sign_up, :as => :sign_up
     post "sign_up", :action => :public_create, :as => :public_user_create
