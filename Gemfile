@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'unicorn'
 gem 'capistrano', group: :development
 
+gem 'devise'
+
 # old gems
 gem 'protected_attributes'
 gem 'will_paginate'
