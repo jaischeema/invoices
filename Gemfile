@@ -16,7 +16,6 @@ gem 'capistrano', group: :development
 gem 'devise'
 
 # old gems
-gem 'protected_attributes'
 gem 'will_paginate'
 gem 'prawn'
 gem 'haml'
