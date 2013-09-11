@@ -14,11 +14,16 @@ header
       width: 300px;
       background-image: url('/assets/logo.png');
       background-repeat: no-repeat;
-      background-position: left 23px;
       font-family: "ostrich_sansmedium";
       font-size: 86px;
       color: white;
       padding-left: 80px;
+      padding-top: 5px;
+      text-decoration: none;
+
+      &:hover {
+         color: #ddd;
+      }
    }
 }
 
@@ -57,4 +62,17 @@ header
          text-align: right;
       }
    }
+}
+
+#passwords
+{
+   color: white;
+   text-align: center;
+
+   h2 {
+      margin-top: 0px;
+      margin-bottom: 20px;
+   }
+
+   .links a { color: white }
 }
