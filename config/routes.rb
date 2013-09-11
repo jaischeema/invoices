@@ -7,8 +7,10 @@ Invoices::Application.routes.draw do
     delete "/logout" => "devise/sessions#destroy", as: :logout
   end
 
-  get '/dashboard' => 'dashboard#index', as: :dashboard
+  # show the invoices page as first page
+  get '/invoices' => 'invoices#index', as: :dashboard
 
+  resources :users
   resources :invoices
   resources :clients
   resources :companies
