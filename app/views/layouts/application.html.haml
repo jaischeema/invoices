@@ -2,7 +2,7 @@
 %html
   %head
     %title= AppConfig.site_title
-    = stylesheet_link_tag '//netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css'
+    = stylesheet_link_tag 'bootstrap.min.css'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tag
@@ -11,5 +11,5 @@
       .container
         = link_to AppConfig.site_title, root_path, :class => "navbar-brand"
         %ul.nav.navbar-nav.pull-right
-          <li><a href="#">Welcome, Mark Otto</a></li>
-          <li><a href="#">Logout</a></li>
+          %li= link_to "Welcome, Mark Otto", "#"
+          %li= link_to "Logout", logout_path, :method => :delete, "data-confirm" => "Are your sure?"
