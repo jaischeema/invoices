@@ -11,4 +11,7 @@
       .container
         #logo Invoices
     .container
+      - if flash[:alert]
+        .col-lg-offset-3.col-lg-6
+          .alert.alert-danger= flash[:alert]
       = yield
