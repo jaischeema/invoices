@@ -1,6 +1,7 @@
-%h1
-  = t('.list_invoices')
-  %span.right= link_to t('.new_invoice'), new_invoice_path
+.page-header.row
+  %h1.col-lg-8= t('.list_invoices')
+  .actions.col-lg-4
+    = link_to t('.new_invoice'), new_invoice_path
 
 %table
   %thead
