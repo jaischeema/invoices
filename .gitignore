@@ -9,6 +9,7 @@
 /log/*.log
 /tmp
 .DS_Store
+/public/assets
 
 # Ignore the config files
 /config/*.yml
