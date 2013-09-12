@@ -1,9 +1,5 @@
 defaults: &defaults
-  app_domain: localhost:3000
   site_title: Invoices
-  default_locale: :en
-
-# -----------------------------------------------------------------------------------
 
 development:
   <<: *defaults

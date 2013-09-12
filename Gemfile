@@ -4,11 +4,14 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 
-gem 'sqlite3', group: :development
-
 group :production do
   gem 'rails_12factor'
   gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
+  gem 'foreman'
 end
 
 gem 'sass-rails', '~> 4.0.0'
