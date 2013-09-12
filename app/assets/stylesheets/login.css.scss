@@ -19,7 +19,7 @@ header
    {
       margin: 0 auto;
       width: 300px;
-      background-image: url('/assets/logo.png');
+      background-image: asset-url('logo.png', image);
       background-repeat: no-repeat;
       font-family: "ostrich_sansmedium";
       font-size: 86px;
