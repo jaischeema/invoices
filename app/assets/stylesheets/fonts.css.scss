@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'ostrich_sanscondensed_light';
-    src: asset-url('fonts/ostrich-light-webfont.eot', image);
-    src: asset-url('/assets/fonts/ostrich-light-webfont.eot?#iefix',image) format('embedded-opentype'),
-         asset-url('/assets/fonts/ostrich-light-webfont.woff',image) format('woff'),
-         asset-url('/assets/fonts/ostrich-light-webfont.ttf',image) format('truetype'),
-         asset-url('/assets/fonts/ostrich-light-webfont.svg#ostrich_sanscondensed_light',image) format('svg');
+    src: asset-url('ostrich-light-webfont.eot', font);
+    src: asset-url('ostrich-light-webfont.eot?#iefix',font) format('embedded-opentype'),
+         asset-url('ostrich-light-webfont.woff',font) format('woff'),
+         asset-url('ostrich-light-webfont.ttf',font) format('truetype'),
+         asset-url('ostrich-light-webfont.svg#ostrich_sanscondensed_light',font) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -12,11 +12,11 @@
 
 @font-face {
     font-family: 'ostrich_sansmedium';
-    src: asset-url('/assets/fonts/ostrich-regular-webfont.eot',image);
-    src: asset-url('/assets/fonts/ostrich-regular-webfont.eot?#iefix',image) format('embedded-opentype'),
-         asset-url('/assets/fonts/ostrich-regular-webfont.woff',image) format('woff'),
-         asset-url('/assets/fonts/ostrich-regular-webfont.ttf',image) format('truetype'),
-         asset-url('/assets/fonts/ostrich-regular-webfont.svg#ostrich_sansmedium',image) format('svg');
+    src: asset-url('ostrich-regular-webfont.eot',font);
+    src: asset-url('ostrich-regular-webfont.eot?#iefix',font) format('embedded-opentype'),
+         asset-url('ostrich-regular-webfont.woff',font) format('woff'),
+         asset-url('ostrich-regular-webfont.ttf',font) format('truetype'),
+         asset-url('ostrich-regular-webfont.svg#ostrich_sansmedium',font) format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -24,11 +24,11 @@
 
 @font-face {
     font-family: 'ostrich_sans_roundedmedium';
-    src: asset-url('/assets/fonts/ostrich-rounded-webfont.eot',image);
-    src: asset-url('/assets/fonts/ostrich-rounded-webfont.eot?#iefix',image) format('embedded-opentype'),
-         asset-url('/assets/fonts/ostrich-rounded-webfont.woff',image) format('woff'),
-         asset-url('/assets/fonts/ostrich-rounded-webfont.ttf',image) format('truetype'),
-         asset-url('/assets/fonts/ostrich-rounded-webfont.svg#ostrich_sans_roundedmedium',image) format('svg');
+    src: asset-url('ostrich-rounded-webfont.eot',font);
+    src: asset-url('ostrich-rounded-webfont.eot?#iefix',font) format('embedded-opentype'),
+         asset-url('ostrich-rounded-webfont.woff',font) format('woff'),
+         asset-url('ostrich-rounded-webfont.ttf',font) format('truetype'),
+         asset-url('ostrich-rounded-webfont.svg#ostrich_sans_roundedmedium',font) format('svg');
     font-weight: normal;
     font-style: normal;
 

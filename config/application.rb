@@ -8,7 +8,11 @@ Bundler.require(:default, Rails.env)
 
 module Invoices
   class Application < Rails::Application
+    # Add the fonts path
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    # Precompile additional assets
     config.assets.precompile += ["login.css"]
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
