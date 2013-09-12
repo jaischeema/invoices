@@ -19,6 +19,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string    :state
       t.string    :postcode
       t.string    :trading_name
+      t.string    :phone
       t.string    :abn
 
       t.timestamps

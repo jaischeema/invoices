@@ -2,21 +2,13 @@ class InvoicesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    company = current_user.company
-    if company
-      @invoices = Invoice.where('client_id in (?)', current_user.company.clients.all.collect(&:id)) \
-                       .paginate(:page => params[:page], :per_page => 10, :order => 'created_at desc')
-    else
-      @invoices = Invoice.none.paginate(:page => params[:page], :per_page => 10, :order => 'created_at desc')
-    end
+    @invoices = Invoice.where('client_id in (?)', current_user.clients.all.collect(&:id)).paginate(:page => params[:page], :per_page => 10, :order => 'created_at desc')
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.xml  { render :xml => @invoices }
     end
   end
 
-  # GET /invoices/1
-  # GET /invoices/1.xml
   def show
     @invoice = Invoice.where('id = ? and client_id in (?)', params[:id], current_user.company.clients.all.collect(&:id)).first
 
@@ -29,8 +21,6 @@ class InvoicesController < ApplicationController
     end
   end
 
-  # GET /invoices/new
-  # GET /invoices/new.xml
   def new
     @invoice = Invoice.new
     @item = Item.new # Fix for error list, which throws exception if item is nil

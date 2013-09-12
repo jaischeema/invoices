@@ -3,6 +3,11 @@ body
   padding-top: 70px;
 }
 
+.navbar
+{
+  background-color: #2E0927;
+}
+
 .page-header
 {
   margin-top: 0px;
@@ -12,4 +17,25 @@ body
 {
   font-family: "ostrich_sansmedium";
   font-size: 42px;
+}
+
+.info-grid
+{
+  .title h4
+  {
+    color: #aaa;
+    font-size: 16px;
+  }
+
+  .info
+  {
+    line-height: 1.5em;
+    margin-bottom: 20px;
+  }
+}
+
+.actions
+{
+  padding-top: 13px;
+  text-align: right;
 }

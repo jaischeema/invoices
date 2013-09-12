@@ -1,0 +1,40 @@
+.page-header.row
+  %h1.col-lg-8 Edit your details
+  .actions.col-lg-4
+    = link_to "Show Profile", user_path(@user), :class => 'btn btn-success'
+    = link_to "Change Password", user_path(@user), :class => 'btn btn-danger'
+
+= form_for @user, :html => { :class => 'form-horizontal' } do |f|
+  .form-group
+    = f.label :email, "Email", :class => 'col-lg-2 control-label'
+    .col-lg-6
+      %p.form-control-static= @user.email
+  .form-group
+    = f.label :trading_name, "Trading Name", :class => 'col-lg-2 control-label'
+    .col-lg-6
+      = f.text_field :trading_name, :class => 'form-control', :placeholder => 'Trading/Business name'
+  .form-group
+    = f.label :phone, "Contact", :class => 'col-lg-2 control-label'
+    .col-lg-3
+      = f.text_field :phone, :class => 'form-control', :placeholder => 'Phone number'
+  .form-group
+    = f.label :abn, "ABN", :class => 'col-lg-2 control-label'
+    .col-lg-3
+      = f.text_field :abn, :class => 'form-control', :placeholder => 'Australian Business Number'
+  .form-group
+    = f.label :address_line_1, "Address", :class => 'col-lg-2 control-label'
+    .col-lg-6
+      = f.text_field :address_line_1, :class => 'form-control', :placeholder => 'Unit, Apartment or Flat Number'
+  .form-group
+    .col-lg-6.col-lg-offset-2
+      = f.text_field :address_line_2, :class => 'form-control', :placeholder => 'Street number and name'
+  .form-group
+    .col-lg-2.col-lg-offset-2
+      = f.text_field :suburb, :class => 'form-control', :placeholder => 'Suburb'
+    .col-lg-2
+      = f.text_field :state, :class => 'form-control', :placeholder => 'State'
+    .col-lg-2
+      = f.text_field :postcode, :class => 'form-control', :placeholder => 'Post code'
+  .form-group
+    .col-lg-2.col-lg-offset-2
+      = f.submit "Update details", :class => 'btn btn-inverse'

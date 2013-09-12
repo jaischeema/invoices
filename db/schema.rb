@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20110219162623) do
     t.string   "state"
     t.string   "postcode"
     t.string   "trading_name"
+    t.string   "phone"
     t.string   "abn"
     t.datetime "created_at"
     t.datetime "updated_at"

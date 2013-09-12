@@ -1,0 +1,31 @@
+.page-header.row
+  %h1.col-lg-8= @user.display_name
+  .actions.col-lg-4
+    = link_to "Edit Details", edit_user_path(@user), :class => 'btn btn-success'
+
+.info-grid
+  .row
+    .col-lg-2.title
+      %h4.mute Address
+    .col-lg-10.info
+      %h4= value_or_empty(@user.address)
+  .row
+    .col-lg-2.title
+      %h4.mute Phone
+    .col-lg-10.info
+      %h4= value_or_empty(@user.phone)
+  .row
+    .col-lg-2.title
+      %h4.mute Email
+    .col-lg-10.info
+      %h4= value_or_empty(@user.email)
+  .row
+    .col-lg-2.title
+      %h4.mute Trading Name
+    .col-lg-10.info
+      %h4= value_or_empty(@user.trading_name)
+  .row
+    .col-lg-2.title
+      %h4.mute ABN
+    .col-lg-10.info
+      %h4= value_or_empty(@user.abn)
