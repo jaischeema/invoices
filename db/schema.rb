@@ -11,50 +11,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130910110210) do
+ActiveRecord::Schema.define(version: 20110219162623) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "address"
-    t.integer  "company_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "company_name"
-  end
-
-  create_table "companies", force: true do |t|
-    t.string   "name"
-    t.string   "address"
+    t.string   "phone"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "postcode"
+    t.string   "trading_name"
+    t.string   "abn"
+    t.boolean  "active"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "invoices", force: true do |t|
     t.text     "notes"
+    t.text     "terms"
     t.string   "status"
     t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "terms"
   end
 
   create_table "items", force: true do |t|
     t.text     "description"
-    t.decimal  "unit_cost",             precision: 11, scale: 2
-    t.integer  "quantity"
-    t.integer  "discount",    limit: 3
+    t.decimal  "unit_cost",   precision: 11, scale: 2
+    t.decimal  "quantity",    precision: 6,  scale: 2
+    t.decimal  "discount",    precision: 3,  scale: 2
     t.integer  "invoice_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                               null: false
-    t.integer  "company_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "role"
+    t.string   "email",                  default: "", null: false
+    t.string   "role",                   default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -64,6 +61,15 @@ ActiveRecord::Schema.define(version: 20130910110210) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "address_line_1"
+    t.string   "address_line_2"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "postcode"
+    t.string   "trading_name"
+    t.string   "abn"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
